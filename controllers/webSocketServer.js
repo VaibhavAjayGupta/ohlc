@@ -44,7 +44,7 @@ if (!isMainThread) {
     stockBarDataArray.forEach((value) => {
         pubSubManager.publish(value[0], JSON.stringify(value[1]));
     })
-    pubSubManager.broker();
+   pubSubManager.broker();
   });
 }
 

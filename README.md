@@ -7,6 +7,8 @@ Steps to run
 2. cd ohlc
 3. npm install
 4. npm start
+5. open localhost:3000 on browser
+6. subscribe to XZECXXBT
 
 
 Design
