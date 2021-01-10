@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><Node OHLC Server></title>
+    <title>Node OHLC Server</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>OHLC Chart</h1>
-    <p>Welcome to OHLC Server</p>
-  </body>
+    <h2>Subscribe to any Stock (XXBTZUSD,XZECXXBT, XETHZUSD, XXLMXXBT, ADAEUR)</h2>
+    <input type="text" id="channel" placeholder="XXBTZUSD,XZECXXBT, XETHZUSD, XXLMXXBT, ADAEUR" />
+    <button onclick="subscribe()">Subscribe</button>
+    <div>
+        <h1>Message:</h1>
+        <div id="message"></div>
+    </div>
+</body>
+  <script>
+function subscribe() {
+            var message = document.getElementById('message');
+            var channel = document.getElementById('channel').value;
+            var host = window.document.location.host.replace(/:.*/, '');
+            var ws = new WebSocket('ws://' + host + ':3030');
+            ws.onopen = function () {
+                ws.send(JSON.stringify({
+                    request: 'SUBSCRIBE',
+                    message: '',
+                    channel: channel
+                }));
+                ws.onmessage = function(event){
+                    data = JSON.parse(event.data);
+                    message.innerHTML = data.message;
+                };
+            };
+        }
+
+  </script>
 </html>
