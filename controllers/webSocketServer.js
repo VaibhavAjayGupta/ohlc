@@ -15,9 +15,10 @@ socketServer.on('connection', (socketClient) => {
 
   socketClient.on('message', (data) => {    
     const json = JSON.parse(data);
-    const request = json.request;
-    const message = json.message;
-    const channel = json.channel;
+    const request = json.event;
+    const interval = json.interval;
+    const channel = json.symbol;
+    const message = null;
 
     switch (request) {
       case 'PUBLISH':
