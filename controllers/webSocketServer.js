@@ -21,10 +21,10 @@ socketServer.on('connection', (socketClient) => {
     const message = null;
 
     switch (request) {
-      case 'PUBLISH':
+      case 'publish':
         pubSubManager.publish(channel, message);
         break;
-      case 'SUBSCRIBE':
+      case 'subscribe':
           pubSubManager.subscribe(socketClient, channel);
         break;
     }

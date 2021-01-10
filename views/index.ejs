@@ -21,7 +21,7 @@ function subscribe() {
             var ws = new WebSocket('ws://' + host + ':3030');
             ws.onopen = function () {
                 ws.send(JSON.stringify({
-                    event: 'SUBSCRIBE',
+                    event: 'subscribe',
                     interval: 15,
                     symbol: channel
                 }));
