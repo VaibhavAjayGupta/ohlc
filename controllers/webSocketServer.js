@@ -32,7 +32,7 @@ socketServer.on('connection', (socketClient) => {
   });
 
   socketClient.on('close', (socketClient) => {
-    console.log('closed');
+    console.log('Client Disconnected');
     console.log('Number of clients: ', socketServer.clients.size);
   });
 
