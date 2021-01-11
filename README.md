@@ -15,8 +15,8 @@
  1. 1 Async line by line file reading (using stream) module readline. - for reading the data line by line using stream and non blocking.
 
  2. 2 workers </br>
-  1. generateChartData - for parsing the response , computing the OHLC packet, and constructing BAR chart data
-  2. webSocketServer - for implementing the websocket which maintains the client list and publish the data which is computed in realtime.
+        generateChartData - for parsing the response , computing the OHLC packet, and constructing BAR chart data.</br>
+        webSocketServer - for implementing the websocket which maintains the client list and publish the data which is computed in realtime.
 
 <b>Classes & Methods </b> 
 
