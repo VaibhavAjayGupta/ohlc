@@ -10,7 +10,7 @@ const pubSubManager = new PubSubManager();
 const socketServer = new WebSocket.Server({ port: 3030 });
 
 socketServer.on('connection', (socketClient) => {
-  console.log('connected');
+  console.log('Client Subscribed');
   console.log('client Set length: ', socketServer.clients.size);
 
   socketClient.on('message', (data) => {    
@@ -26,7 +26,6 @@ socketServer.on('connection', (socketClient) => {
         break;
       case 'subscribe':
           pubSubManager.subscribe(socketClient, channel);
-          pubSubManager.broker();
         break;
     }
   });
@@ -45,7 +44,7 @@ if (!isMainThread) {
     stockBarDataArray.forEach((value) => {
         pubSubManager.publish(value[0], JSON.stringify(value[1]));
     })
-   //pubSubManager.broker();
+   pubSubManager.broker();
   });
 }
 
