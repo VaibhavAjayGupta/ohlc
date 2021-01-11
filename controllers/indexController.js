@@ -12,7 +12,7 @@ outputLine.on('line',(line)=>{
 });
 
 outputLine.on('close',()=>{
-    console.log("Closed");
+    console.log("File reading complete");
 });
 
 exports.ohlc_data = function (req, res, next) {
