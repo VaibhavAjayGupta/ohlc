@@ -37,8 +37,8 @@
 
 <b>DataStructers </b>
 
- 1. HashMap is used for storing different subscribers for different stocks.
- 2. HashMap is used for storing different bars.
+ 1. Map is used for storing different subscribers for different stocks.
+ 2. Map is used for storing different bars.
  
 <b>Flow of project</b>
 
