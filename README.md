@@ -12,11 +12,11 @@
 
 <b>Design</b>
 
- 1. 1 Async line by line file reading (using stream) module readline. - for reading the data line by line using stream and non blocking.
+ 1. Async line by line file reading (using stream) module readline. - for reading the data line by line using stream and non blocking.
 
  2. 2 workers </br>
-        generateChartData - for parsing the response , computing the OHLC packet, and constructing BAR chart data.</br>
-        webSocketServer - for implementing the websocket which maintains the client list and publish the data which is computed in realtime.
+        <b>generateChartData</b> - for parsing the response , computing the OHLC packet, and constructing BAR chart data.</br>
+        <b>webSocketServer</b> - for implementing the websocket which maintains the client list and publish the data which is computed in realtime.
 
 <b>Classes & Methods </b> 
 
