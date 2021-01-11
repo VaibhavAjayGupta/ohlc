@@ -20,8 +20,8 @@
 
 <b>Classes & Methods </b> 
 
- 1. StockBarData class is used for storing the bar data.
-  Methods:- 
+ 1. StockBarData class is used for storing the bar data.</br>
+  Methods:- </br>
    1. constructor(open,symbol,volume,bar_num) - for creating new bar with open, symbol, volume and bar_num
    2. updateVolume(value) - for updating volume of bar
    3. updateClose() for updating the close
