@@ -20,7 +20,7 @@
 
 <b>Classes & Methods </b> 
 
- StockBarData class is used for storing the bar data.</br>
+ <b>StockBarData</b> class is used for storing the bar data.</br>
   Methods:- </br>
    1. constructor(open,symbol,volume,bar_num) - for creating new bar with open, symbol, volume and bar_num.
    2. updateVolume(value) - for updating volume of bar.
@@ -28,7 +28,7 @@
    4. updateLow(value) for updating low.
    5. updateHigh(value) for updating high.
 
- PubSubManager is used for maintaining the list of subscribed clients and publish the data. </br>
+ <b>PubSubManager</b> is used for maintaining the list of subscribed clients and publish the data. </br>
   Methods:- </br>
    1. subscribe(subscriber, channel) - for subscribing to a particular stock(channel).
    2. publish(channel, message) - for publishing a message to a particular stock(channel).
