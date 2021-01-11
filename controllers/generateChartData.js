@@ -35,8 +35,9 @@ if (!isMainThread) {
 
 
                 } else {
-                    let newStockData = new StockBarData(tradeData.P, tradeData.sym, tradeData.Q, barCount);
-                    stockBarDataMap.set(tradeData.sym, newStockData);
+                    let newStockBarData = new StockBarData(tradeData.P, tradeData.sym, tradeData.Q, barCount);
+                    barStartTime=tradeData.TS2 / 1000000000;
+                    stockBarDataMap.set(tradeData.sym, newStockBarData);
                 }
 
                 
@@ -53,9 +54,9 @@ if (!isMainThread) {
                 stockBarDataMap.clear();
                 barCount++;
 
-                let newStockData = new StockBarData(tradeData.P, tradeData.sym, tradeData.Q, barCount);
+                let newStockBarData = new StockBarData(tradeData.P, tradeData.sym, tradeData.Q, barCount);
                 barStartTime = tradeData.TS2 / 1000000000;
-                stockBarDataMap.set(tradeData.sym, newStockData);
+                stockBarDataMap.set(tradeData.sym, newStockBarData);
                 socketData.postMessage(JSON.stringify([...stockBarDataMap]));
             }
             

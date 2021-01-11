@@ -26,6 +26,7 @@ socketServer.on('connection', (socketClient) => {
         break;
       case 'subscribe':
           pubSubManager.subscribe(socketClient, channel);
+          pubSubManager.broker();
         break;
     }
   });
@@ -44,7 +45,7 @@ if (!isMainThread) {
     stockBarDataArray.forEach((value) => {
         pubSubManager.publish(value[0], JSON.stringify(value[1]));
     })
-   pubSubManager.broker();
+   //pubSubManager.broker();
   });
 }
 
