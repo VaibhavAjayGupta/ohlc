@@ -1,6 +1,6 @@
-Node OHLC server
+<b>Node OHLC server</b>
 
-Steps to run
+<b>Steps to run</b>
 
 1. git clone git@github.com:VaibhavAjayGupta/ohlc.git
 2. cd ohlc
@@ -10,14 +10,14 @@ Steps to run
 6. subscribe to XZECXXBT
 
 
-Design
+<b>Design</b>
 
  1 Async line by line file reading (using stream) module readline. - for reading the data line by line using stream and non blocking.
 
  2 workers 
   generateChartData - for parsing the response , computing the OHLC packet, and constructing BAR chart data
   webSocketServer - for implementing the websocket which maintains the client list and publish the data which is computed in realtime.
-  
+
 Classes & Methods - 
 
  StockBarData class is used for storing the bar data.
