@@ -50,14 +50,13 @@ if (!isMainThread) {
 
                 socketData.postMessage(JSON.stringify([...stockBarDataMap]));
                
-               
                 stockBarDataMap.clear();
                 barCount++;
 
                 let newStockData = new StockBarData(tradeData.P, tradeData.sym, tradeData.Q, barCount);
                 barStartTime = tradeData.TS2 / 1000000000;
                 stockBarDataMap.set(tradeData.sym, newStockData);
-
+                socketData.postMessage(JSON.stringify([...stockBarDataMap]));
             }
             
          
