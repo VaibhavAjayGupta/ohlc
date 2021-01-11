@@ -12,10 +12,6 @@ class PubSubManager {
         this.channels.get(channel).subscribers.push(subscriber);
     }
 
-    removeBroker() {
-        clearInterval(this.brokerId);
-    }
-
     publish(channel, message) {        
         if(this.channels.get(channel)==undefined){
             this.channels.set(channel,{

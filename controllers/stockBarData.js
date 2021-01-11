@@ -31,8 +31,8 @@ module.exports = class StockBarData{
         this.volume+=value;
     }
 
-    updateBar(){
-        this.bar_num++;
-    }
+    // updateBar(){
+    //     this.bar_num++;
+    // }
 
 }

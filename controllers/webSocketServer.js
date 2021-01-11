@@ -3,7 +3,7 @@ const { workerData, parentPort, isMainThread } = require('worker_threads');
 const express = require('express');
 const WebSocket = require('ws');
 const path = require('path');
-const PubSubManager = require('./pubsub');
+const PubSubManager = require('./pubSubManager');
 
 const app = express();
 const pubSubManager = new PubSubManager();

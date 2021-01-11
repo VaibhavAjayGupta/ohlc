@@ -63,10 +63,9 @@ if (!isMainThread) {
          
             
         } catch (e) {
+            console.log(e);
         }
                   
-        
-    
 });   
         
 }
