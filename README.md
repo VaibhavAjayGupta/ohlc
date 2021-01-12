@@ -48,4 +48,6 @@
  4. webSocketServer maintains the list of subscribed clients and publish the response in realtime as received from the generateChartData.
  5. OHLC data is sent on Every trade.
 
-Note : TS2 TimeStamp conversion - first 16 digits are the seconds, and the last 9 are nanoseconds.
+<b>Note : </b>
+  1. You won't see any data after subscribing to a particular stock because as soon as the node server is started it's done reading all the data from file and all the data is pushed to the already exisiting clients. As there is no new data pushed to the websocket there is no data recieved by the client. 
+  2. TS2 TimeStamp conversion - first 16 digits are the seconds, and the last 9 are nanoseconds.
