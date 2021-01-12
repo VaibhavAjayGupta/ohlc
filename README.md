@@ -46,5 +46,6 @@
  2. The line by line response is then posted immediately to a separate worker (generateChartData) for parsing, computing the OHLC packet, and constructing BAR chart data. 
  3. Realtime computed data is then posted to a separate worker (webSocketServer).
  4. webSocketServer maintains the list of subscribed clients and publish the response in realtime as received from the generateChartData.
+ 5. OHLC data is sent on Every trade.
 
 Note : TS2 TimeStamp conversion - first 16 digits are the seconds, and the last 9 are nanoseconds.
