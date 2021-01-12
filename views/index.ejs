@@ -27,7 +27,7 @@ function subscribe() {
                 }));
                 ws.onmessage = function(event){
                     data = JSON.parse(event.data);
-                    message.innerHTML = data.message;
+                    message.innerHTML += data.message + '/n';
                 };
             };
         }
