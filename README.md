@@ -47,4 +47,4 @@
  3. Realtime computed data is then posted to a separate worker (webSocketServer).
  4. webSocketServer maintains the list of subscribed clients and publish the response in realtime as received from the generateChartData.
 
-Note : TS2 TimeStamp conversion - first 16 digits are the seconds, and the last 9 the nanoseconds.
+Note : TS2 TimeStamp conversion - first 16 digits are the seconds, and the last 9 are nanoseconds.
