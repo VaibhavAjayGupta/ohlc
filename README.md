@@ -1,5 +1,7 @@
 <b>Node OHLC server</b>
 
+Gihub Repo link :- https://github.com/VaibhavAjayGupta/ohlc
+
 <b>Steps to run</b>
 
 1. git clone git@github.com:VaibhavAjayGupta/ohlc.git
@@ -47,6 +49,8 @@
  3. Realtime computed data is then posted to a separate worker (webSocketServer).
  4. webSocketServer maintains the list of subscribed clients and publish the response in realtime as received from the generateChartData.
  5. OHLC data is sent on Every trade.
+ 6. <b>Sample Output</b>
+ {"o":0.01762,"h":0.01762,"l":0.01762,"lastTrade":0.01762,"c":0.01762,"volume":7.8251401,"event":"ohlc_notify","symbol":"XZECXXBT","bar_num":10631}
 
 <b>Note : </b>
   1. You won't see any data after subscribing to a particular stock because as soon as the node server is started it's done reading all the data from file and all the data is pushed to the already exisiting clients. As there is no new data pushed to the websocket there is no data recieved by the client. 
