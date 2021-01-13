@@ -49,7 +49,7 @@ Gihub Repo link :- https://github.com/VaibhavAjayGupta/ohlc
  3. Realtime computed data is then posted to a separate worker (webSocketServer).
  4. webSocketServer maintains the list of subscribed clients and publish the response in realtime as received from the generateChartData.
  5. OHLC data is sent on Every trade.
- 6. <b>Sample Output</b>
+ 6. <b>Output on Every Trade</b>
  {"o":0.01762,"h":0.01762,"l":0.01762,"lastTrade":0.01762,"c":0.01762,"volume":7.8251401,"event":"ohlc_notify","symbol":"XZECXXBT","bar_num":10631}
 
 <b>Note : </b>
